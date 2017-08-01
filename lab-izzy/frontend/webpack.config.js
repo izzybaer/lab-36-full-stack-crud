@@ -30,7 +30,7 @@ if(production){
 module.exports = {
   plugins,
   entry: `${__dirname}/src/main.js`,
-  oputput: {
+  output: {
     filename: 'bundle.[hash].js',
     path: `${__dirname}/build`,
     publicPath: process.env.CDN_URL,
@@ -38,11 +38,11 @@ module.exports = {
   devServer: {historyApiFallback: true},
   devtool: production ? undefined : 'cheap-module-eval-source-map',
   module: {
-    rule: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'bable-loader',
+        loader: 'babel-loader',
       },
       {
         test: /\.scss$/,

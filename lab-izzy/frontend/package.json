@@ -14,7 +14,10 @@
     "test": "jest --coverage",
     "test-watch": "test --watchAll",
     "watch": "webpack-dev-server --inline --hot",
-    "build": "webpack"
+    "build": "webpack",
+    "start": "node main.js",
+    "start-db": "mkdir -p ./db && mongod --dbpath ./db",
+    "stop-db": "killall mongod"
   },
   "dependencies": {
     "babel-core": "^6.25.0",
