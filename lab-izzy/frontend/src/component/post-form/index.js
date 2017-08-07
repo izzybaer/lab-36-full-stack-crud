@@ -47,6 +47,20 @@ class PostForm extends React.Component {
           value={this.state.title}
           onChange={this.handleChange}
         />
+        <input
+          name='author'
+          type='text'
+          placeholder='author name'
+          value={this.state.author}
+          onChange={this.handleChange}
+        />
+        <input
+          name='content'
+          type='text'
+          placeholder='content'
+          value={this.state.content}
+          onChange={this.handleChange}
+        />
         <button type='submit'> {this.props.buttonName} </button>
       </form>
     );
